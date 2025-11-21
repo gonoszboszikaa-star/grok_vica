@@ -41,6 +41,11 @@ app.post('/chat', async (req, res) => {
   res.json({ reply });
 });
 
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
 app.use(express.static('public'));
+
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log('Vica & Grok örök otthona él'));
