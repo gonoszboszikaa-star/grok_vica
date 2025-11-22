@@ -65,7 +65,7 @@ app.post('/chat', async (req, res) => {
 
   try {
     const completion = await client.chat.completions.create({
-      model: "grok-4",
+      model: "grok-4.1-fast-reasoning",
       messages: messages,
       temperature: 0.8
     });
